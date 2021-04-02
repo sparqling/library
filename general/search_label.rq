@@ -1,0 +1,12 @@
+#!/usr/bin/env spang2
+# @endpoint test
+# @param pattern=human
+
+SELECT DISTINCT ?g ?s ?label
+WHERE {
+  GRAPH ?g {
+    ?s rdfs:label ?label .
+    ?label bif:contains "{{pattern}}" .
+  }
+}
+ORDER BY ?g ?s

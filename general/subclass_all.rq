@@ -1,0 +1,11 @@
+#!/usr/bin/env spang2
+# @endpoint test
+# @input (taxid:9606)
+# @option -a
+
+SELECT ?subclass ?label
+WHERE {
+  VALUES (?s) { {{INPUT}} }
+  ?subclass rdfs:subClassOf+ ?s .
+  ?subclass rdfs:label ?label .
+}

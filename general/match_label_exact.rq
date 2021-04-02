@@ -1,0 +1,8 @@
+#!/usr/bin/env spang2
+# @endpoint test
+# @param pattern='"Homo sapiens"'
+
+SELECT DISTINCT ?s
+WHERE {
+  ?s rdfs:label {{pattern}} .
+}

@@ -1,0 +1,12 @@
+#!/usr/bin/env spang2
+# @endpoint test
+# @param pattern=Homo
+
+SELECT DISTINCT ?g ?class ?label
+WHERE {
+  GRAPH ?g {
+    ?class a owl:DatatypeProperty ;
+        rdfs:label ?label .
+    ?label bif:contains "{{pattern}}" .
+  }
+}

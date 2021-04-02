@@ -1,0 +1,9 @@
+#!/usr/bin/env spang2
+# @endpoint test
+# @param pattern="Homo sapiens"
+# @option -a
+
+SELECT *
+WHERE {
+  ?s rdfs:label "{{pattern}}" .
+}

@@ -1,0 +1,11 @@
+#!/usr/bin/env spang2
+# @endpoint test
+# @input (taxid:9606)
+# @option -a
+
+SELECT DISTINCT ?superclass ?label
+WHERE {
+  VALUES (?s) { {{INPUT}} }
+  ?s rdfs:subClassOf+ ?superclass .
+  ?superclass rdfs:label ?label .
+}
