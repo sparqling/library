@@ -1,0 +1,11 @@
+#!/usr/bin/env spang2
+# @endpoint https://sparql.omabrowser.org/sparql/
+# @option -a --time
+
+PREFIX up: <http://purl.uniprot.org/core/>
+
+SELECT ?taxon
+WHERE {
+  ?taxon a up:Taxon ;
+      up:rank up:Species .
+}
