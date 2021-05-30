@@ -1,0 +1,7 @@
+#!/usr/bin/env spang2
+# @endpoint tempura
+
+SELECT (COUNT(DISTINCT ?entry) AS ?count)
+WHERE {
+  ?entry a <http://togodb.org/tempura> .
+}
