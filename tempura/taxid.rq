@@ -1,0 +1,14 @@
+#!/usr/bin/env spang2
+# @endpoint tempura
+# @option --time -c
+# @param taxid=54248
+
+SELECT ?id ?ave ?name ?strain
+WHERE {
+  ?entry a <http://togodb.org/tempura> .
+  ?entry tempura:taxonomy_id "{{taxid}}" .
+  ?entry tempura:id ?id .
+  ?entry tempura:Topt_ave ?ave .
+  ?entry tempura:genus_and_species ?name .
+  ?entry tempura:strain ?strain .
+}
