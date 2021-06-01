@@ -1,0 +1,34 @@
+##
+#Q1: Retrieve where the ENSG00000130208 human gene is expressed and its Mouse ortholog (note ?gene is the connection node between the two resources (OMA and Bgee)
+###
+PREFIX up: <http://purl.uniprot.org/core/>
+PREFIX genex: <http://purl.org/genex#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX sio: <http://semanticscience.org/resource/>
+SELECT DISTINCT ?protein1 ?geneName ?anatName (?protein2 as ?ortholog)   WHERE {
+SELECT * { {
+SELECT DISTINCT ?gene ?geneName  ?anatName {
+	?gene a orth:Gene .
+	?gene genex:isExpressedIn ?anat .
+	?anat rdfs:label ?anatName .
+	?gene orth:organism ?o .
+	?o obo:RO_0002162 ?taxon .
+	?gene dcterms:identifier "ENSG00000130208" ;
+              rdfs:label ?geneName .
+	?taxon up:commonName 'human' . 	}}
+SERVICE <https://sparql.omabrowser.org/sparql> {
+	?cluster a orth:OrthologsCluster .
+	?cluster orth:hasHomologousMember ?node1 .
+	?cluster orth:hasHomologousMember ?node2 .
+	?node2 orth:hasHomologousMember* ?protein2 .
+	?node1 orth:hasHomologousMember* ?protein1 .
+        ?protein1 a orth:Protein.
+        ?protein1 sio:SIO_010079 ?gene .
+	?protein2 a orth:Protein .
+        ?protein2 orth:organism/obo:RO_0002162/up:scientificName "Mus musculus" 
+	FILTER ( ?node1 != ?node2 )
+		}
+	}
+}

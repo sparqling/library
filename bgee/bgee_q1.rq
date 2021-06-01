@@ -1,0 +1,15 @@
+##
+#Q1: where a human gene (for example, “APOC1”) is expressed in .
+###
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX up: <http://purl.uniprot.org/core/>
+PREFIX genex: <http://purl.org/genex#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+SELECT ?anatEntity ?anatName {
+    VALUES ?geneName {'APOC1'} 
+	?seq a orth:Gene .
+	?seq orth:organism/obo:RO_0002162/up:scientificName "Homo sapiens".
+	?seq genex:isExpressedIn ?anatEntity.
+	?seq rdfs:label ?geneName.
+	?anatEntity rdfs:label ?anatName . 
+} 

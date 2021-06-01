@@ -1,0 +1,17 @@
+##
+#Q2: where a human gene defined with an Ensembl identifier (for example, ENSG00000244734) is expressed in .
+###
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX genex: <http://purl.org/genex#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX lscr: <http://purl.org/lscr#>
+SELECT ?anatEntity ?anatName ?ensembl_rdf_uri {
+    VALUES ?geneID {'ENSG00000244734'} 
+	?seq a orth:Gene .
+	?seq genex:isExpressedIn ?anatEntity .
+    ?seq lscr:xrefEnsemblGene ?ensembl_rdf_uri .
+    ?seq dct:identifier  ?geneID.
+	?anatEntity rdfs:label ?anatName . 
+}
