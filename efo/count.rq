@@ -1,0 +1,8 @@
+#!/usr/bin/env spang2
+# @endpoint spang
+# @option --time
+
+SELECT (COUNT (DISTINCT ?term) AS ?total_count)
+WHERE {
+  ?term rdfs:subClassOf* efo:EFO_0000001 .
+}
