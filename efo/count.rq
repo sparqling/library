@@ -2,7 +2,8 @@
 # @endpoint spang
 # @option --time
 
-SELECT (COUNT (DISTINCT ?term) AS ?total_count)
+SELECT (COUNT (DISTINCT ?term) AS ?count)
+FROM <http://www.ebi.ac.uk/efo/efo.owl>
 WHERE {
   ?term rdfs:subClassOf* efo:EFO_0000001 .
 }
