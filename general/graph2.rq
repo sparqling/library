@@ -9,4 +9,3 @@ WHERE {
   }
 }
 GROUP BY ?g
-ORDER BY ?g
