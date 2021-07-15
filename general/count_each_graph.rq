@@ -1,0 +1,12 @@
+#!/usr/bin/env spang2
+# @endpoint test
+# @option --time
+
+SELECT ?graph (COUNT(?graph) AS ?triples)
+WHERE {
+  GRAPH ?graph {
+    ?s ?p ?o .
+  }
+}
+GROUP BY ?graph
+ORDER BY DESC(?triples)
