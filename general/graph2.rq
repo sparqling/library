@@ -1,0 +1,12 @@
+#!/usr/bin/env spang2
+# @endpoint test
+# @option --time
+
+SELECT ?g
+WHERE {
+  GRAPH ?g {
+    ?s ?p ?o
+  }
+}
+GROUP BY ?g
+ORDER BY ?g
