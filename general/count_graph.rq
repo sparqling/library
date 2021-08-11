@@ -1,0 +1,10 @@
+#!/usr/bin/env spang2
+# @endpoint test
+# @param graph=<http://ddbj.nig.ac.jp/ontologies/taxonomy/>
+
+SELECT (COUNT(*) AS ?triples)
+WHERE {
+  GRAPH {{graph}} {
+    ?s ?p ?o .
+  }
+}
