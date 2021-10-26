@@ -1,0 +1,15 @@
+#!/usr/bin/env spang2
+# @endpoint https://sparql.omabrowser.org/sparql/
+# @option -a --time
+#Get information about the taxonomic level of a given node represented with an hierarchical othologous group (HOG).
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX orth: <http://purl.org/net/orth#>
+select ?taxon_name ?taxRange  ?taxon_id
+where {
+VALUES ?cluster {<https://omabrowser.org/oma/hog/resolve/HOG:A0001188_272557>}
+?cluster a orth:OrthologsCluster.
+?cluster orth:hasTaxonomicRange ?taxRange .
+?taxRange orth:taxRange ?taxon_name ;
+         orth:taxRangeId ?taxon_id . 
+ 
+}
