@@ -2,6 +2,11 @@
 # @endpoint mbgd2020
 # @option -vac --time -f nt
 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX taxid: <http://identifiers.org/taxonomy/>
+PREFIX taxon: <http://ddbj.nig.ac.jp/ontologies/taxonomy/>
+PREFIX mbgd: <http://purl.jp/bio/11/mbgd#>
+
 CONSTRUCT {
   ?genome mbgd:inTaxon ?taxon .
 }
