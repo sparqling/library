@@ -1,0 +1,14 @@
+#!/usr/bin/env spang2
+# @endpoint mbgd2020
+# @option -vac --time -f nt
+
+CONSTRUCT {
+  ?genome mbgd:inTaxon ?taxon .
+}
+WHERE {
+  ?genome a mbgd:CompleteGenome ;
+      mbgd:taxon ?taxid .
+  ?taxid_new taxon:merged* ?taxid ;
+      rdfs:subClassOf* ?taxon .
+  FILTER (?taxon != taxid:1) # Omit the top level "root"
+}
