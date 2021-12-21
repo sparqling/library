@@ -1,0 +1,10 @@
+#!/usr/bin/env spang2
+# @endpoint spang
+# @input (9606) (10090) (10116)
+
+SELECT ?id ?label
+WHERE {
+  VALUES (?id) { {{INPUT}} }
+  BIND(URI(CONCAT('http://identifiers.org/taxonomy/', $id)) AS ?taxid)
+  ?taxid rdfs:label ?label .
+}
