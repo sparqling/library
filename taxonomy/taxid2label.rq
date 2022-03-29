@@ -1,5 +1,5 @@
 #!/usr/bin/env spang2
-# @endpoint spang
+# @endpoint https://spang.dbcls.jp/sparql
 # @input (9606) (10090) (10116)
 
 SELECT ?id ?label
