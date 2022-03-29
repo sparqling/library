@@ -3,5 +3,20 @@
     "name": "oma",
     "title": "OMA",
     "endpoint": "https://sparql.omabrowser.org/sparql/"
+  },
+  {
+    "name": "bgee",
+    "title": "Bgee",
+    "endpoint": "https://bgee.org/sparql"
+  },
+  {
+    "name": "uniprot",
+    "title": "UniProt",
+    "endpoint": "https://sparql.uniprot.org"
+  },
+  {
+    "name": "taxonomy",
+    "title": "Taxonomy",
+    "endpoint": "https://spang.dbcls.jp/sparql"
   }
 ]
