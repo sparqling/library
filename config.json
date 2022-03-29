@@ -10,7 +10,7 @@
   {
     "name": "bgee",
     "title": "Bgee",
-    "endpoint": "https://bgee.org/sparql"
+    "endpoint": "https://bgee.org/sparql",
     "queries": [
       "bgee_q1.rq",
       "bgee_q2.rq",
