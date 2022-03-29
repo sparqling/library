@@ -2,7 +2,10 @@
   {
     "name": "oma",
     "title": "OMA",
-    "endpoint": "https://sparql.omabrowser.org/sparql/"
+    "endpoint": "https://sparql.omabrowser.org/sparql/",
+    "queries": [
+      "taxonomy.rq"
+    ]
   },
   {
     "name": "bgee",
