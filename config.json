@@ -1,0 +1,7 @@
+[
+  {
+    "name": "oma",
+    "title": "OMA",
+    "endpoint": "https://sparql.omabrowser.org/sparql/"
+  }
+]
