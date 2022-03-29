@@ -1,5 +1,5 @@
 #!/usr/bin/env spang2
-# @endpoint uniprot
+# @endpoint https://sparql.uniprot.org
 # @option -a
 
 SELECT ?s
