@@ -11,11 +11,12 @@
     "name": "bgee",
     "title": "Bgee",
     "endpoint": "https://bgee.org/sparql"
-  },
-  {
-    "name": "uniprot",
-    "title": "UniProt",
-    "endpoint": "https://sparql.uniprot.org"
+    "queries": [
+      "bgee_q1.rq",
+      "bgee_q2.rq",
+      "bgee_q3.rq",
+      "bgee_q4.rq"
+    ]
   },
   {
     "name": "taxonomy",
