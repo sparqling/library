@@ -1,0 +1,10 @@
+#!/usr/bin/env spang2
+# @endpoint uniprot
+# @option -a
+
+SELECT ?s
+WHERE {
+  ?s a up:Protein .
+  ?s up:organism upTax:9606 .
+}
+LIMIT 10
