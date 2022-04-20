@@ -1,5 +1,13 @@
 [
   {
+    "name": "homologene",
+    "title": "HomoloGene",
+    "endpoint": "https://orth.dbcls.jp/sparql",
+    "queries": [
+      "list_organisms.rq"
+    ]
+  },
+  {
     "name": "oma",
     "title": "OMA",
     "endpoint": "https://sparql.omabrowser.org/sparql/",
