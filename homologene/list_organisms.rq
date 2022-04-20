@@ -1,6 +1,6 @@
 #!/usr/bin/env spang2
 # @title List organisms included in HomoloGene
-# @endpoint ortho
+# @endpoint https://orth.dbcls.jp/sparql-orth1
 # @option -a
 
 PREFIX orth: <http://purl.org/net/orth#>
