@@ -4,7 +4,8 @@
     "title": "HomoloGene",
     "endpoint": "https://orth.dbcls.jp/sparql",
     "queries": [
-      "list_organisms.rq"
+      "list_organisms.rq",
+      "get_ortholog.rq"
     ]
   },
   {
