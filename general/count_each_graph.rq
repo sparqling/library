@@ -1,5 +1,5 @@
 #!/usr/bin/env spang2
-# @endpoint test
+# @endpoint https://spang.dbcls.jp/sparql
 # @option --time
 
 SELECT ?graph (COUNT(?graph) AS ?triples)
